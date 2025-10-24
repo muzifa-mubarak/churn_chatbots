@@ -7,3 +7,4 @@ transformers
 google-generativeai
 python-dotenv
 twilio
+torch
