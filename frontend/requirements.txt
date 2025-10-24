@@ -1,0 +1,5 @@
+gradio
+pandas
+requests
+google-generativeai
+python-dotenv
