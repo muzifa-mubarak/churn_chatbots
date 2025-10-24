@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+pandas
+scikit-learn
+joblib
+transformers
+google-generativeai
+python-dotenv
+twilio
