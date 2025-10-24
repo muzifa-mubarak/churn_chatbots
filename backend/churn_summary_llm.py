@@ -160,4 +160,10 @@ async def predict_churn(file: UploadFile = File(...)):
         "High-Risk Segment": insight.get("High-Risk Segment", "N/A")
     }
 
+
     return {"Summary": result}
+
+if __name__ == "__main__":
+    import uvicorn
+    port = int(os.environ.get("PORT", 8000))  # Use Render's port automatically
+    uvicorn.run(app, host="0.0.0.0", port=port)
