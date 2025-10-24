@@ -30,7 +30,10 @@ api_key = os.getenv("GEMINI_API_KEY")
 genai.configure(api_key=api_key)
 
 # ---- Initialize sentiment analysis pipeline ----
-sentiment_pipeline = pipeline("sentiment-analysis")
+sentiment_pipeline = pipeline(
+    "sentiment-analysis",
+    model="distilbert-base-uncased-finetuned-sst-2-mini"  # smaller than default
+)
 
 # ---- Twilio SMS config ----
 account_sid = os.getenv("TWILIO_API_KEY")
@@ -167,3 +170,4 @@ if __name__ == "__main__":
     import uvicorn
     port = int(os.environ.get("PORT", 8000))  # Use Render's port automatically
     uvicorn.run(app, host="0.0.0.0", port=port)
+
